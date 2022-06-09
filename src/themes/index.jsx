@@ -1,3 +1,2 @@
-export const themes = () => {
-    
-}
+export * from './theme';
+export * from './global';

@@ -1,6 +1,13 @@
 import React from "react";
-import { Router } from './routes';
+import { Router } from "./routes";
+import { useTheme } from "styled-components";
+import { GlobalStyles, Theme } from "./themes";
 
 export const App = () => {
-  return <Router />;
+  return (
+    <Theme>
+      <GlobalStyles />
+      <Router />
+    </Theme>
+  );
 };

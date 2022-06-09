@@ -1,3 +1,14 @@
+import { BarChart, ScatterChart, Navbar, Container, Content, Header } from "../components";
+
 export const Home = () => {
-  return <h1>Olá Mundo</h1>;
+  return (
+    <Container>
+      <Navbar />
+      <Content>
+        <Header />
+        <BarChart />
+        <ScatterChart />
+      </Content>
+    </Container>
+  );
 };
