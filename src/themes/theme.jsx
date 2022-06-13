@@ -2,15 +2,9 @@ import { useContext } from "react";
 import { SettingsContext } from "../contexts";
 import { ThemeProvider } from "styled-components";
 
-const fontSizes = [64, 24, 16, 14];
-fontSizes.ExtraLarge = `${fontSizes[0]}px`;
-fontSizes.Large = `${fontSizes[1]}px`;
-fontSizes.Medium = `${fontSizes[2]}px`;
-fontSizes.Small = `${fontSizes[3]}px`;
 const fontFamily = "'Montserrat', sans-serif";
 
 const darkTheme = {
-  fontSizes,
   fontFamily,
   colors: {
     background: "#2a2a2c",
@@ -21,7 +15,6 @@ const darkTheme = {
 };
 
 const lightTheme = {
-  fontSizes,
   fontFamily,
   colors: {
     background: "#F6F6F6",

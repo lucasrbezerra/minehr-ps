@@ -1,4 +1,5 @@
 import React, { createContext } from "react";
+import salary from "../imports/salary.json";
 import { useCharts } from "./hooks";
 
 const initialValues = {
@@ -14,6 +15,7 @@ const initialValues = {
   scatterData: {
     series: [],
   },
+  data: salary,
 };
 
 const ChartsContext = createContext(initialValues);
