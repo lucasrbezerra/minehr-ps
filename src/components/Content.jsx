@@ -7,7 +7,7 @@ export const Content = styled.main`
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 968px) {
     height: auto;
     flex-direction: column;
     justify-content: center;

@@ -1,6 +1,8 @@
-import ReactApexChart from "react-apexcharts";
-import { Info } from "../components";
+import { useContext } from "react";
 import styled, { useTheme } from "styled-components";
+import ReactApexChart from "react-apexcharts";
+import { ChartsContext } from "../contexts";
+import { Info } from "../components";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -9,18 +11,17 @@ const Wrapper = styled.div`
   padding: 2rem;
   border-radius: 0.5rem;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  tspan {
+    fill: ${({ theme }) => theme.colors.text};
+  }
 `;
 
 export const BarChart = () => {
   const theme = useTheme();
+  const { barData } = useContext(ChartsContext);
 
   const chartData = {
-    series: [
-      {
-        data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380],
-        name: "Gastos em Dólar",
-      },
-    ],
+    series: barData.series,
     options: {
       title: {
         text: "Barras",
@@ -47,18 +48,7 @@ export const BarChart = () => {
         enabled: false,
       },
       xaxis: {
-        categories: [
-          "South Korea",
-          "Canada",
-          "United Kingdom",
-          "Netherlands",
-          "Italy",
-          "France",
-          "Japan",
-          "United States",
-          "China",
-          "Germany",
-        ],
+        categories: barData.categories,
       },
     },
   };

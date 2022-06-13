@@ -1,13 +1,17 @@
 import React from "react";
 import { Router } from "./routes";
-import { useTheme } from "styled-components";
 import { GlobalStyles, Theme } from "./themes";
+import { SettingsProvider, ChartsProvider } from "./contexts";
 
 export const App = () => {
   return (
-    <Theme>
-      <GlobalStyles />
-      <Router />
-    </Theme>
+    <SettingsProvider>
+      <ChartsProvider>
+        <Theme>
+          <GlobalStyles />
+          <Router />
+        </Theme>
+      </ChartsProvider>
+    </SettingsProvider>
   );
 };
