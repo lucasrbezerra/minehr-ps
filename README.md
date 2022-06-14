@@ -39,7 +39,7 @@ npm run dev
 A aplicação também pode ser visualizada através do seguinte link:
 
 ```
-https://minehr-ps.herokuapp.com
+https://minehr-ps-git-master-lucasrbezerra.vercel.app
 ```
 
 
