@@ -27,7 +27,7 @@ export const Subtitle = styled.p`
   color: ${({ theme }) => theme.colors.text};
 `;
 
-export const Filter = styled.button`
+export const FilterButton = styled.button`
   padding: 0.5rem 1rem;
   background-color: ${({ theme }) => theme.colors.primary};
   border-radius: 0.5rem;

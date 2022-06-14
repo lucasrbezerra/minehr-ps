@@ -29,27 +29,23 @@ export const getAverage = (json, field) => {
   return Math.round(total / data.length);
 };
 
-export const makeObjectSorted = (keys, values) => {
-  var obj = {};
+export const getObjectSorted = (keys, values) => {
   var vet = [];
   const professions_sorted = [];
   const avarages_salary_sorted = [];
   const result = [];
 
-  for (let i = 0; i < keys.length; i++) {
-    obj["prof"] = keys[i];
-    obj["val"] = values[i];
-    vet.push(obj);
-    obj = {};
-  }
-
-  vet.sort(function (a, b) {
-    return a["val"] - b["val"];
+  vet = keys.map((key, index) => {
+    return { profession: key, average: values[index] };
   });
 
-  for (let i in vet) {
-    professions_sorted.push(vet[i].prof);
-    avarages_salary_sorted.push(vet[i].val);
+  vet.sort(function (a, b) {
+    return a["average"] - b["average"];
+  });
+
+  for (let item of vet) {
+    professions_sorted.push(item["profession"]);
+    avarages_salary_sorted.push(item["average"]);
   }
 
   result.push(avarages_salary_sorted);
@@ -67,6 +63,18 @@ export const getDataArrayScatter = (values, fieldX, fieldY) => {
     data.push(axis);
     axis = [];
   }
-  
+
   return data;
+};
+
+export const getProfessionsChecked = (values, mode) => {
+  return values.map((profession) => {
+    return { profession: profession, checked: mode };
+  });
+};
+
+export const getProfessionsFiltered = (checkeds) => {
+  return checkeds.flatMap((values) =>
+    values.checked ? [values.profession] : []
+  );
 };
