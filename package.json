@@ -8,6 +8,10 @@
     "start": "vite preview",
     "preview": "vite preview"
   },
+  "engines": {
+    "npm": "^8.1.2",
+    "node": "^16.13.1"
+  },
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
