@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "start": "vite preview --host $PORT",
-    "preview": "vite preview --host $PORT"
+    "start": "vite preview -p $PORT",
+    "preview": "vite preview -p $PORT"
   },
   "dependencies": {
     "@emotion/react": "^11.9.3",
