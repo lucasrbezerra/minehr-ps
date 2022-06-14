@@ -5,12 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "start": "vite preview --host 3000",
-    "preview": "vite preview --host 3000"
-  },
-  "engines": {
-    "npm": "^8.1.2",
-    "node": "^16.13.1"
+    "start": "vite preview",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@emotion/react": "^11.9.3",
